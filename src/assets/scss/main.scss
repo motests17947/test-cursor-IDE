@@ -1,0 +1,124 @@
+// 定義變數
+$primary-color: #4caf50;
+$secondary-color: #f5f5f5;
+$text-color: #333;
+$error-color: #ff3d00;
+
+// 基本樣式
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background-color: $secondary-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// 表單樣式
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+// PrimeVue 組件樣式
+.p-inputtext {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus {
+    outline: 0 none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+
+  &.p-invalid {
+    border-color: $error-color;
+  }
+}
+
+.p-button {
+  background-color: $primary-color;
+  color: white;
+  border: 1px solid $primary-color;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.8);
+    border-color: rgba($primary-color, 0.8);
+  }
+}
+
+.p-calendar {
+  width: 100%;
+
+  .p-inputtext {
+    width: 100%;
+  }
+}
+
+.p-textarea {
+  width: 100%;
+
+  textarea {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+      outline: 0 none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+    }
+  }
+}
+
+.p-dialog {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+
+  .p-dialog-header {
+    padding: 1rem;
+    background-color: $primary-color;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .p-dialog-content {
+    padding: 1rem;
+  }
+}
